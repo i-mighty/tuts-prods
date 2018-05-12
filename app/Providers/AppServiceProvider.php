@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -30,6 +31,9 @@ class AppServiceProvider extends ServiceProvider
 	    	'admin' => 'App\Admin',
 		    'user' => 'App\User',
 	    ]);
+	    if(env('APP_ENV') == 'production'){
+	    	URL::forceSchema('https');
+	    }
     }
 
     /**
