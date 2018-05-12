@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\User;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Schema\Builder;
+use Illuminate\Routing\UrlGenerator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
@@ -17,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
         //
 	    Builder::defaultStringLength(191);
@@ -32,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
 		    'user' => 'App\User',
 	    ]);
 	    if(env('APP_ENV') == 'production' || env('APP_ENV') == 'stage'){
-	    	URL::forceSchema('https');
+	    	URL::forceScheme('https');
 	    }
     }
 
