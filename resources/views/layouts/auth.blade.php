@@ -39,7 +39,7 @@
             @yield('content')
             <!--footer section start-->
 			<footer>
-            <p>&copy 2015 Easy Admin Panel. All Rights Reserved |<a href="{{url('/')}}" target="_blank">{{config('app.name')}}</a></p>
+            <p>&copy 2015 <a href="{{url('/')}}" target="_blank">{{config('app.name')}}</a></p>
          </footer>
      <!--footer section end-->
         </section>
