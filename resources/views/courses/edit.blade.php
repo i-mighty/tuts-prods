@@ -146,6 +146,12 @@
                             </a>
                         </ul>
                     </div>
+                    <a class="col-md-12 col-sm-12" href="{{url('courses/'.$course->id.'/chapter/create')}}">
+                        <button class="main-button" >
+                            Make Test
+                            <i class="fa fa-fw fa-graduation-cap"></i>
+                        </button>
+                    </a>
                 </div>
                 <div id="alert" class="alerter col-md-offset-1 col-md-10 visible-xs">
                     <div class="alert fade in" align="center">

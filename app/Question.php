@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     //
-	protected $fillable = ['text'];
+	protected $fillable = ['text', 'answer'];
+
 	public function test(){
 		return $this->belongsTo('App\Test');
 	}
